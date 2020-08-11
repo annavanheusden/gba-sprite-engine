@@ -5,6 +5,13 @@ project(AnnaVanheusden)
 
 set(CMAKE_CXX_STANDARD 14)
 
+add_executable(AnnaVanheusden.elf
+        src/view/titlescreen/titlescreen.h
+        src/Board_scene.cpp
+        src/Board_scene.h
+        src/main.cpp
+        src/Titlescreen_scene.cpp
+        src/Titlescreen_scene.h)
 
 target_link_libraries(${PROJECT_NAME}.elf gba-sprite-engine)
 

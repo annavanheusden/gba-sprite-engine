@@ -7,6 +7,10 @@
 
 
 #include <libgba-sprite-engine/scene.h>
+#include "../../engine/include/libgba-sprite-engine/gba_engine.h"
+#include "../../engine/include/libgba-sprite-engine/sprites/sprite.h"
+#include "../../engine/include/libgba-sprite-engine/background/background.h"
+#include "../../engine/include/libgba-sprite-engine/gba/tonc_types.h"
 
 class Board_scene: public Scene {
 private:

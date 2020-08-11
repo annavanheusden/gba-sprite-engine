@@ -7,8 +7,10 @@
 #include "view/titlescreen/titlescreen.h"
 #include "Board_scene.h"
 #include <libgba-sprite-engine/gba_engine.h>
+#include "../../engine/include/libgba-sprite-engine/palette/palette_manager.h"
+#include "../../engine/include/libgba-sprite-engine/effects/fade_out_scene.h"
 #include <libgba-sprite-engine/effects/fade_out_scene.h>
-
+#include <libgba-sprite-engine/background/text_stream.h>
 
 std::vector<Background *> Titlescreen_scene::backgrounds() {
     return {background.get()};
@@ -18,8 +20,8 @@ std::vector<Sprite *> Titlescreen_scene::sprites() {
 }
 
 void Titlescreen_scene:: load(){
-    background = std::unique_ptr<Background>(new Background(0, titlescreenTiles, sizeof(titlescreenTiles), titlescreenMap, sizeof(titlescreenMap)));
-    background->useMapScreenBlock(0);
+    background = std::unique_ptr<Background>(new Background(0, titlescreenTiles, sizeof(titlescreenTiles), titlescreenMap,
+                                                            sizeof(titlescreenMap), 24, 0, MAPLAYOUT_32X32));
     backgroundPalette = std::unique_ptr<BackgroundPaletteManager>(new BackgroundPaletteManager(titlescreenPal, sizeof(titlescreenPal)));
 }
 

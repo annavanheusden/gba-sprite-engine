@@ -6,6 +6,10 @@
 #define GBA_SPRITE_ENGINE_PROJECT_TITLESCREEN_SCENE_H
 
 #include <libgba-sprite-engine/scene.h>
+#include "../../engine/include/libgba-sprite-engine/gba_engine.h"
+#include "../../engine/include/libgba-sprite-engine/background/background.h"
+#include "../../engine/include/libgba-sprite-engine/gba/tonc_types.h"
+#include "../../engine/include/libgba-sprite-engine/sprites/sprite.h"
 
 class Titlescreen_scene : public Scene {
 private:
