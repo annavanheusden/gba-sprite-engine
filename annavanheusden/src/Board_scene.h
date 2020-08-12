@@ -14,7 +14,7 @@
 
 class Board_scene: public Scene {
 private:
-
+    std::unique_ptr<Background> background;
 public:
     Board_scene(std::shared_ptr<GBAEngine> engine): Scene(engine){}
 

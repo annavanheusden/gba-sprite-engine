@@ -21,8 +21,10 @@ std::vector<Sprite *> Titlescreen_scene::sprites() {
 
 void Titlescreen_scene:: load(){
     background = std::unique_ptr<Background>(new Background(0, titlescreenTiles, sizeof(titlescreenTiles), titlescreenMap,
-                                                            sizeof(titlescreenMap), 24, 0, MAPLAYOUT_32X32));
-    backgroundPalette = std::unique_ptr<BackgroundPaletteManager>(new BackgroundPaletteManager(titlescreenPal, sizeof(titlescreenPal)));
+                                                            sizeof(titlescreenMap), 20, 0, MAPLAYOUT_32X32));
+    backgroundPalette = std::unique_ptr<BackgroundPaletteManager>(new BackgroundPaletteManager(
+            reinterpret_cast<const COLOR *>(titlescreenPal), sizeof(titlescreenPal)));
+
 }
 
 void Titlescreen_scene:: tick(u16 keys){
