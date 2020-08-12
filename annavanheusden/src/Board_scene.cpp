@@ -16,9 +16,9 @@ std::vector<Sprite *> Board_scene::sprites() {
 }
 
 void Board_scene:: load(){
-    background = std::unique_ptr<Background>(new Background(0, board__1_Tiles, sizeof(board__1_Tiles), board_map, sizeof(board_map), 9, 1, MAPLAYOUT_32X32));
+    background = std::unique_ptr<Background>(new Background(0, board_tiles_palTiles, sizeof(board_tiles_palTiles), board_map, sizeof(board_map), 20, 0, MAPLAYOUT_32X32));
     backgroundPalette = std::unique_ptr<BackgroundPaletteManager>(new BackgroundPaletteManager(
-            reinterpret_cast<const COLOR *>(board__1_Pal), sizeof(board__1_Pal)));
+            reinterpret_cast<const COLOR *>(board_tiles_palPal), sizeof(board_tiles_palPal)));
 }
 
 void Board_scene:: tick(u16 keys){
