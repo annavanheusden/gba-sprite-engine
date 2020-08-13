@@ -11,7 +11,7 @@ add_executable(AnnaVanheusden.elf
         src/Board_scene.h
         src/main.cpp
         src/Titlescreen_scene.cpp
-        src/Titlescreen_scene.h)
+        src/Titlescreen_scene.h src/Player.cpp src/Player.h)
 
 target_link_libraries(${PROJECT_NAME}.elf gba-sprite-engine)
 
