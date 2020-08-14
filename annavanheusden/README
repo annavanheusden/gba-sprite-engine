@@ -1,0 +1,5 @@
+Mario Party:
+ Player kan met behulp van keys (left, right, up, down) de pion besturen.
+ Op het spelbord zijn er verschillende entrances naar minigames.
+ Door tijdsgebrek tot spelbord geraakt omdat ik vastzat bij het implementeren van boundaries aan het spelbord zodat Mario enkel hierover zou kunnen lopen.
+

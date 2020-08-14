@@ -23,18 +23,12 @@ void Board_scene:: load(){
             reinterpret_cast<const COLOR *>(board_tiles_palPal), sizeof(board_tiles_palPal)));
     foregroundPalette = std::unique_ptr<ForegroundPaletteManager>(new ForegroundPaletteManager(MarioPal, sizeof(MarioPal)));
 
-   /*mario = std::unique_ptr<Player>(new Player(affineBuilder.withData(MarioTiles, sizeof(MarioTiles))
-            .withSize(SIZE_32_32)
-            .withLocation(10, 10)
-            .buildPtr()));
-*/
+
    player = spriteBuilder
            .withData(MarioTiles, sizeof(MarioTiles))
            .withLocation(10, 10)
            .withSize(SIZE_32_32)
            .buildPtr();
-
-   //mario = std::unique_ptr<Player>(new Player(player*));
 }
 
 void Board_scene:: tick(u16 keys){
