@@ -41,10 +41,11 @@ void Board_scene::movePlayer(u16 keys) {
 
     //RECHTS
     if(keys & KEY_RIGHT){
-        int playerX = player->getX() + 1;
+        /*int playerX = player->getX() + 1;
         int playerY = player->getY();
         go = checkBoundaries(playerX, playerY);
-        if(!right & go){
+         */
+        if(!right){
             right = true;
             player->flipHorizontally(true);
             player->makeAnimated(2, 10);
@@ -54,10 +55,11 @@ void Board_scene::movePlayer(u16 keys) {
     else{ right = false ;}
     //LINKS
     if(keys & KEY_LEFT){
-        int playerX = player->getX() - 1;
+        /*int playerX = player->getX() - 1;
         int playerY = player->getY();
         go = checkBoundaries(playerX, playerY);
-        if(!left & go){
+         */
+        if(!left){
             left = true;
             player->flipHorizontally(false);
             player->makeAnimated(2, 10);
@@ -68,10 +70,11 @@ void Board_scene::movePlayer(u16 keys) {
 
     //BOVEN
     if(keys & KEY_UP){
-        int playerX = player->getX();
+        /*int playerX = player->getX();
         int playerY = player->getY() - 1;
         go = checkBoundaries(playerX, playerY);
-        if(!up & go){
+         */
+        if(!up){
             up = true;
             player->makeAnimated(2, 10);
             player->moveTo(player->getX(), player->getY()- 1 );
@@ -81,11 +84,12 @@ void Board_scene::movePlayer(u16 keys) {
 
     //ONDER
     if(keys & KEY_DOWN){
-        int playerX = player->getX();
+        /*int playerX = player->getX();
         int playerY = player->getY() +1;
         go = checkBoundaries(playerX, playerY);
+         */
 
-        if(!down & go){
+        if(!down){
             down = true;
             player->makeAnimated(2, 10);
             player->moveTo(player->getX() ,player->getY() + 1);
